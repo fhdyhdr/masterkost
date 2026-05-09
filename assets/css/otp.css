@@ -1,0 +1,127 @@
+a, button, input, i, span {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+
+body, html {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #1d243d;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  
+  .height-100 {
+      height: 100vh
+  }
+  
+  .card {
+      width: 100%;
+      border: none;
+      height: 420px;
+  
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #15192a;
+      
+  }
+  
+  .card h6 {
+      color: rgb(179, 203, 183);
+      font-size: 16px
+  }
+  
+  .inputs input {
+      width: 40px;
+      height: 40px
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0
+  }
+  
+  .card-2 {
+      background-color: #fff;
+      padding: 10px;
+      width: 350px;
+      height: 100px;
+      bottom: -50px;
+      left: 20px;
+      position: absolute;
+      border-radius: 5px
+  }
+  
+  .card-2 .content {
+      margin-top: 50px
+  }
+  
+  .card-2 .content a {
+      color: red
+  }
+  
+  
+  .form-control:focus {
+      box-shadow: none;
+      border: 3px solid rgb(104, 80, 182)
+  }
+  
+  .validate {
+      border-radius: 20px;
+      height: 40px;
+      background-color: rgb(96, 104, 126);
+      border: 1px  rgb(96, 104, 126) ;
+      width: 140px
+  }
+  
+  .errorOtp {
+    background: #c32e2e;
+    text-align: center;
+    width: 337px;
+    padding: 2px;
+    border: 0;
+    border-radius: 5px;
+    margin: 10px auto 10px;
+    top: 31%;
+    left: 7.2%;
+    color: white;
+    display: none;
+    font-size: 13px;
+  }
+  
+  .successOtp{
+    background: #3d7d47;
+    text-align: center;
+    width: 337px;
+    padding: 2px;
+    border: 0;
+    border-radius: 5px;
+    top: 31%;
+    left: 7.2%;
+    color: white;
+    display: none;
+    font-size: 13px;
+  }
+
+  .formOtp{
+    margin-top: 50px;
+}
+
+
+  @media screen and (min-width: 1020px) {
+
+    .card {
+        width: 600px;
+        height: 420px;
+    }
+
+    
+  }
+  

@@ -1,0 +1,264 @@
+a, button, input,i {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+
+body, html {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #F1F0E8;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin: 0;
+  top: 50px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  border-radius: 9px;
+  width: 400px;
+  height: 500px;
+  background-color: transparent;
+}
+
+
+.box h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #5c6bc0; 
+  font-size: 23px;
+}
+
+.box h4 span {
+  color: #dfdeee;
+  font-weight: lighter;
+}
+
+.box h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  color: #a1a4ad;
+  letter-spacing: 1.5px;
+  margin-top: -15px;
+  margin-bottom: 70px;
+}
+
+.box input[type = "text"],.box input[type = "password"] {
+  display: block;
+  margin: 20px auto;
+  background: #E4E0E1;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  width: 320px;
+  outline: none;
+  color: #000000;
+      -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+  
+}
+::-webkit-input-placeholder {
+  color: #565f79;
+}
+
+.box input[type = "text"]:focus,.box input[type = "password"]:focus {
+  border: 1px solid #798645;
+  
+}
+
+.dnthave{
+  color: #989898;
+  text-decoration: none;
+}
+
+
+
+ label input[type = "checkbox"] {
+  display: none; /* hide the default checkbox */
+}
+
+/* style the artificial checkbox */
+label span {
+  height: 13px;
+  width: 13px;
+  border: 2px solid #464d64;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  left: 7.5%;
+}
+
+.btn1 {
+  border:0;
+  background: #31511E;
+  color: #dfdeee;
+  border-radius: 100px;
+  width: 340px;
+  height: 49px;
+  font-size: 16px;
+  position: absolute;
+  top: 79%;
+  left: 8%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background: #859F3D;
+}
+
+.rmb {
+  position: absolute;
+  margin-left: -24%;
+  margin-top: 0px;
+  color: #dfdeee;
+  font-size: 13px;
+}
+
+
+.forgetpass {
+  position: relative;
+  float: right;
+  right: 28px;
+  color: #257180;
+}
+
+.dnthave{
+    position: absolute;
+    top: 99%;
+    left: 24%;
+}
+
+[type=checkbox]:checked + span:before {/* <-- style its checked state */
+    font-family: FontAwesome;
+    font-size: 16px;
+    content: "\f00c";
+    position: absolute;
+    top: -4px;
+    color: #896cec;
+    left: -1px;
+    width: 13px;
+}
+
+.typcn {
+  position: absolute;
+  left: 339px;
+  top: 232px;
+  color: #3b476b;
+  font-size: 22px;
+  cursor: pointer;
+}      
+
+.typcn.active {
+  color: #3700ff;
+}
+
+.error {
+  background: #c32e2e;
+  text-align: center;
+  width: 85%;
+  height: 20px;
+  padding: 2px;
+  border: 0;
+  border-radius: 5px;
+  margin: 10px auto 10px;
+  position: absolute;
+  top: 20%;
+  left: 7.2%;
+  color: white;
+  display: none;
+  font-size: 13px;
+}
+
+.success{
+  background: #3d7d47;
+  text-align: center;
+  width: 85%;
+  height: 20px;
+  padding: 2px;
+  border: 0;
+  border-radius: 5px;
+  margin: 10px auto 10px;
+  position: absolute;
+  top: 23%;
+  left: 7.2%;
+  color: white;
+  display: none;
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 520px) {
+    .container{
+        top: 100px;
+        border-top: transparent;
+        border-bottom: transparent;
+      }
+
+      .typcn {
+        left: 330px;
+        top: 250px;
+      }
+
+  
+}
+
+
+@media screen and (min-width: 520px) {
+  .container{
+      top: 100px;
+      width: 500px;
+      height: 550px;
+    }
+
+    .dnthave{
+      position: absolute;
+      top: 100%;
+      left: 30%;
+  }
+    .box input[type = "text"],.box input[type = "password"] {
+      width: 400px;
+    }
+    .btn1 {
+      width: 85%;
+    }
+
+    .typcn {
+      left: 420px;
+      top: 247px;
+    }
+    
+}
+
+
+
+.signuptitle{
+    text-decoration: underline;
+    font-weight: 800;
+    color: #668cffa8;
+}
+
+

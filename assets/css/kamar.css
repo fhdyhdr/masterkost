@@ -1,0 +1,385 @@
+
+
+.container-kamar .info p {
+  margin-top: 10px;
+  display: inline-block;
+  font-weight: 700;
+
+}
+
+.totalkamar, .kamarterisi{
+font-size: 20px;
+}
+
+
+.container-kamar {
+  display: flex;
+  justify-content: space-between; /* Menyebarkan konten di kiri dan kanan */
+  align-items: center; /* Menyelaraskan secara vertikal */
+  margin-top: 50px;
+  padding: 0 140px;
+}
+
+
+
+
+.container-kamar .info {
+  display: flex;
+  flex-direction: column; /* Menampilkan elemen `<p>` secara vertikal */
+  background-color: #5a33a847;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.container-kamar .actions {
+  display: flex;
+  gap: 10px; /* Jarak antar tombol */
+
+}
+
+
+@media screen and (max-width: 895px) {
+  .container-kamar {
+    flex-direction: column; /* Tumpukan vertikal */
+    align-items: flex-start; /* Elemen rata kiri */
+    padding: 0 40px;
+    margin-top: 20px;
+  }
+
+  .actions {
+    width: 100%; /* Sesuaikan lebar tombol */
+    display: flex;
+    justify-content: space-between; /* Menyebar tombol di kanan dan kiri */
+    margin-top: 30px;
+  }
+
+  .actions button {
+    width: auto; /* Ukuran tombol tetap otomatis */
+  }
+
+  
+}
+
+
+
+
+
+.container-kamar button {
+  padding: 10px 20px; /* Ukuran padding tombol */
+  background-color: #486a49; /* Warna biru */
+  color: white; /* Warna teks */
+  font-size: 12px; /* Ukuran font */
+  font-weight: bold; /* Teks tebal */
+  border: none; /* Hilangkan border */
+  border-radius: 4px; /* Sudut melengkung */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan tombol */
+  cursor: pointer; /* Pointer saat hover */
+  transition: all 0.3s ease; /* Animasi transisi */
+}
+
+.container-kamar button:hover {
+  background-color: #252c27bc; /* Warna lebih gelap saat hover */
+  transform: translateY(-2px); /* Efek mengangkat tombol saat hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+}
+
+.container-kamar button:active {
+  background-color: #417e39; /* Warna lebih gelap saat ditekan */
+  transform: translateY(1px); /* Tombol sedikit turun */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Bayangan lebih kecil saat ditekan */
+}
+
+
+
+
+.gradekamar{
+  margin-top: 20px;
+}
+
+
+
+
+.button-grade {
+  background-color: transparent; /* Tidak ada isi (fill) */
+  color: rgb(0, 0, 0); /* Warna teks putih */
+  border: 2px solid rgb(0, 0, 0); /* Border putih */
+  padding: 8px; /* Padding lebih kecil */
+  border-radius: 5px; /* Membuat sudut membulat */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Efek transisi */
+}
+
+.button-grade:hover {
+  color: black; /* Ubah warna teks saat hover */
+}
+
+
+.gradekamar span{
+  font-size: 16px;
+}
+
+.tipe-kamar{
+  background-color: #57856366;
+  padding: 5px;
+  border-radius: 7px;
+  color: #111;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+
+  .gradekamar p{
+    display: none;
+  }
+
+  .right-spans{
+    margin-top: 25px;
+    margin-left: -60px;
+  }
+  
+  .spans-container .status-label {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    margin-right: 10px;
+  }
+  
+
+}
+
+
+
+
+
+.overlay p{
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.right-spans span{
+  cursor: pointer;
+}
+
+.right-spans .fa-pen-to-square{
+  color: #4fc08d;
+}
+
+
+
+.right-spans .fa-trash-can{
+  color: #dc3545;
+}
+
+.data-kamar{
+  display: flex;
+}
+.data-kamar .data-tipe{
+  color: aquamarine;
+}
+
+.data-kamar .data-no{
+  margin-left: 20px;
+  color: #bebaff;
+}
+
+#delete-form input{
+  cursor: pointer;
+}
+
+#delete-form input[type='submit']{
+  background-color:#dc3545 ;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #111;
+  background: #f5f6f8;
+}
+
+a,
+button {
+  color: #4fc08d;
+}
+
+main {
+  width: min(1800px, 85%);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding-block: min(20vh, 5em);
+}
+main .header {
+  margin-bottom: 55px;
+}
+@media screen and (max-width: 600px) {
+  main .header {
+    margin-bottom: 70px !important;
+  }
+}
+main .header h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  margin: 5px -5px 15px;
+}
+main .header span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #471aa0;
+}
+main .header p {
+  max-width: min(40ch, 100% - 2rem);
+  line-height: 1.6;
+  color: #565656;
+}
+main .item {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+main .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+main .item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 28px 25px;
+  color: #fff;
+  background: #020024;
+  background: linear-gradient(0deg, #bebaff -10%, #9999c9a1 3%, #17d9ff00 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main .item .overlay span {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 60px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+main .item .overlay > div h2 {
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.owl-nav {
+  position: absolute;
+  top: -100px;
+  right: 0;
+}
+@media screen and (max-width: 600px) {
+  .owl-nav {
+    top: -60px !important;
+  }
+}
+.owl-nav button {
+  background: #fff !important;
+  width: 45px;
+  height: 45px;
+  font-size: 25px !important;
+  box-shadow: 0px 0px 17px #00000005;
+  border-radius: 50%;
+}
+.owl-nav button:nth-of-type(1) {
+  margin-right: 13px;
+}
+
+.owl-carousel.owl-theme:first-of-type {
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+
+
+.owl-carousel.owl-theme{
+
+  margin-top: 70px;
+
+}
+
+
+@media screen and (min-width: 576px) {
+
+  main .item .overlay .spans-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .spans-container .status-label {
+    position: absolute;
+    top: 90px;
+  }
+  
+
+
+}
+
+
+main .item .overlay .bottom-container{
+  margin: 0 auto; /* Hilangkan margin yang tidak perlu */
+}
+
+
+
+
+.gradekamar {
+  display: flex;
+  flex-wrap: wrap; /* Membungkus elemen ke baris baru jika ruang habis */
+  gap: 10px; /* Jarak antar tombol */
+  margin-top: 10px; /* Tambahkan jarak atas */
+}
+
+
+
+
+
+
+
+@media (min-width: 580px) and (max-width: 1500px) {
+
+  .spans-container  .hapuskamar{
+    margin-top: 10px;
+  }
+
+  .spans-container  .nokamar{
+    margin-top: 10px;
+  }
+  .spans-container .status-label {
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 500px) and (max-width: 796px) {
+
+  .spans-container .status-label {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+
+}

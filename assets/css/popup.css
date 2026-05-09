@@ -1,0 +1,564 @@
+:root[style*="--device: mobile"] .popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out; /* Transition effect for sliding */
+    z-index: 1000;
+  }
+  
+  :root[style*="--device: mobile"] .popup .popup-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:auto; /* Height of the popup content */
+    background: #29292c;
+    color: #EEEEEE;
+    padding: 15px;
+    padding-top: 35px;
+    border-radius: 20px 20px 0 0;
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out; /* Transition effect for sliding */
+    z-index: 9999;
+  }
+  
+  :root[style*="--device: mobile"] .popup.active .popup-content {
+    transform: translateY(0); /* Slide in from the bottom */
+  }
+  
+  :root[style*="--device: mobile"] .popup .popup-overlay {
+    position: fixed; /* Fix the overlay to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full viewport height */
+    background: rgba(0, 0, 0, 0.528);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out; /* Transition for opacity */
+    z-index: 999; /* Ensure it's behind the content */
+  }
+  
+  :root[style*="--device: mobile"] .popup.active {
+    transform: translateY(0); /* Slide in from the bottom */
+  }
+  
+  :root[style*="--device: mobile"] .popup.active .popup-overlay {
+    opacity: 1; /* Fade in overlay */
+  }
+  
+  :root[style*="--device: mobile"] .popup .fa-xmark{
+    position: absolute;
+    background: transparent;
+    border: none;
+    color: #EEEEEE;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+  
+  :root[style*="--device: mobile"] .popup .fa-xmark {
+    top: 20px; /* Adjusted position */
+    right: 20px; /* Adjusted position */
+    font-size: 27px;
+  }
+
+
+
+  /* config.css */
+
+:root {
+  --baseColor: #606468;
+}
+
+
+
+.grid {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40rem;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* helpers/hidden.css */
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* helpers/icon.css */
+
+:root {
+  --iconFill: var(--baseColor);
+}
+
+.icons {
+  display: none;
+}
+
+.icon {
+  height: 1em;
+  display: inline-block;
+  fill: #606468;
+  fill: var(--iconFill);
+  width: 1em;
+  vertical-align: middle;
+}
+
+/* layout/base.css */
+
+:root {
+  --htmlFontSize: 100%;
+
+  --bodyBackgroundColor: #2c3338;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+}
+
+
+
+/* modules/anchor.css */
+
+:root {
+  --anchorColor: #eee;
+}
+
+a {
+  color: #eee;
+  color: var(--anchorColor);
+  outline: 0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+/* modules/form.css */
+
+:root {
+  --formGap: 0.875rem;
+}
+
+input {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.form {
+  display: grid;
+  grid-gap: 0.875rem;
+  gap: 0.875rem;
+  grid-gap: var(--formGap);
+  gap: var(--formGap);
+}
+
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="submit"],
+.form input[type="button"] {
+  width: 100%;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* modules/login.css */
+
+:root {
+  --loginBorderRadus: 0.25rem;
+  --loginColor: #eee;
+
+  --loginInputBackgroundColor: #3b4148;
+  --loginInputHoverBackgroundColor: #434a52;
+
+  --loginLabelBackgroundColor: #363b41;
+
+  --loginSubmitBackgroundColor: #5F6F65;
+  --loginSubmitColor: #eee;
+  --loginSubmitHoverBackgroundColor: #6A9C89;
+}
+
+.login {
+  color: #eee;
+  color: var(--loginColor);
+}
+
+.login label,
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="submit"],
+.login input[type="button"] {
+  border-radius: 0.25rem;
+  border-radius: var(--loginBorderRadus);
+  padding: 1rem;
+}
+
+
+
+.login label {
+  background-color: #363b41;
+  background-color: var(--loginLabelBackgroundColor);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.login input[type="password"],
+.login input[type="text"] {
+  background-color: #3b4148;
+  background-color: var(--loginInputBackgroundColor);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.ul-container label,
+.ul-container input[type="text"]{
+  padding: 0;
+  background-color: transparent;
+}
+
+
+.login input[type="password"]:focus,
+.login input[type="password"]:hover,
+.login input[type="text"]:focus,
+.login input[type="text"]:hover {
+  background-color: #434a52;
+  background-color: var(--loginInputHoverBackgroundColor);
+}
+
+.login input[type="submit"], .login input[type="button"] {
+  background-color: #ea4c88;
+  background-color: var(--loginSubmitBackgroundColor);
+  color: #eee;
+  color: var(--loginSubmitColor);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.login input[type="submit"]:focus,
+.login input[type="submit"]:hover {
+  background-color: #d44179;
+  background-color: var(--loginSubmitHoverBackgroundColor);
+}
+
+.login input[type="button"]{
+  margin-right: 20px;
+}
+
+
+
+/* Custom select styles */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.selectwaktu{
+  width: 50%;
+}
+
+.custom-select select {
+  width: 100%;
+  padding: 1rem;
+  background-color: #3b4148; /* Same background color as inputs */
+  color: var(--loginColor);
+  border-radius: var(--loginBorderRadus);
+  border: none; /* Remove default border */
+  appearance: none; /* Remove default arrow */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+
+/* Hover and focus styles */
+.custom-select select:focus {
+  outline: none; /* Remove outline on focus */
+  background-color: var(--loginInputHoverBackgroundColor); /* On focus */
+}
+
+
+
+.custom-select {
+  position: relative;
+  display: flex; /* Use flexbox for easy alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.custom-select select {
+  width: 100%;
+  padding-right: 2rem; /* Add padding to prevent text from overlapping the icon */
+}
+
+.custom-select i {
+  position: absolute; /* Position the icon absolutely */
+  right: 1rem; /* Space from the right edge */
+  pointer-events: none; /* Prevent clicks on the icon */
+  color: var(--baseColor); /* Change color to match your design */
+  font-size: 1.2em; /* Adjust icon size as needed */
+}
+
+
+
+.errorPenyewa {
+  background: #c32e2e;
+  text-align: center;
+  width: 100%;
+  padding: 6px;
+  border: 0;
+  border-radius: 5px;
+  margin: 10px auto 10px;
+  top: 31%;
+  left: 7.2%;
+  color: white;
+  display: none;
+  font-size: 14px;
+}
+
+
+
+
+.image-edit {
+  display: flex;
+}
+
+
+#preview-tambah {
+  width: 160px; 
+  height: 100px;
+  object-fit: cover; 
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#preview-edit{
+  width: 160px; 
+  height: 100px;
+  object-fit: cover; 
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} 
+
+
+
+
+
+
+
+.radio-buttons-container {
+  display: flex;
+  align-items: center;
+  margin-top: -24px;
+}
+
+.radio-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label {
+  display: inline-block;
+  padding-left: 30px;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__custom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__input:checked + .radio-button__label .radio-button__custom {
+  transform: translateY(-50%) scale(0.9);
+  border: 5px solid #4c8bf5;
+  color: #4c8bf5;
+}
+
+.radio-button__input:checked + .radio-button__label {
+  color: #4c8bf5;
+}
+
+.radio-button__label:hover .radio-button__custom {
+  transform: translateY(-50%) scale(1.2);
+  border-color: #f54c4c;
+  box-shadow: 0 0 10px #f54c4c80;
+}
+
+.radio-button label{
+  background-color: transparent;
+  padding-left: 30px;
+}
+
+.head-status{
+  font-size: 15px;
+}
+
+
+/* Saat radio button Lunas dipilih */
+.radio-button__input:checked#radio2 + .radio-button__label .radio-button__custom {
+  border-color: #28a745; /* Hijau */
+  box-shadow: 0 0 10px #28a74580; /* Hijau dengan transparansi */
+}
+
+.radio-button__input:checked#radio2 + .radio-button__label {
+  color: #28a745; /* Hijau */
+}
+
+/* Saat radio button Belum Lunas dipilih */
+.radio-button__input:checked#radio1 + .radio-button__label .radio-button__custom {
+  border-color: #dc3545; /* Merah */
+  box-shadow: 0 0 10px #dc354580; /* Merah dengan transparansi */
+}
+
+.radio-button__input:checked#radio1 + .radio-button__label {
+  color: #dc3545; /* Merah */
+}
+
+/* Hover warna hijau jika Lunas */
+#radio2:hover + .radio-button__label .radio-button__custom,
+.radio-button__input#radio2:not(:checked):hover + .radio-button__label .radio-button__custom {
+  border-color: #28a745; /* Hijau */
+  box-shadow: 0 0 10px #28a74580; /* Hijau dengan transparansi */
+}
+
+/* Hover warna merah jika Belum Lunas */
+#radio1:hover + .radio-button__label .radio-button__custom,
+.radio-button__input#radio1:not(:checked):hover + .radio-button__label .radio-button__custom {
+  border-color: #dc3545; /* Merah */
+  box-shadow: 0 0 10px #dc354580; /* Merah dengan transparansi */
+}
+
+
+/* Saat radio button Lunas dipilih */
+.radio-button__input:checked#radio-aktif + .radio-button__label .radio-button__custom {
+  border-color: #28a745; /* Hijau */
+  box-shadow: 0 0 10px #28a74580; /* Hijau dengan transparansi */
+}
+
+.radio-button__input:checked#radio-aktif + .radio-button__label {
+  color: #28a745; /* Hijau */
+}
+
+/* Saat radio button Belum Lunas dipilih */
+.radio-button__input:checked#radio-tidak-aktif + .radio-button__label .radio-button__custom {
+  border-color: #dc3545; /* Merah */
+  box-shadow: 0 0 10px #dc354580; /* Merah dengan transparansi */
+}
+
+.radio-button__input:checked#radio-tidak-aktif + .radio-button__label {
+  color: #dc3545; /* Merah */
+}
+
+/* Hover warna hijau jika Lunas */
+#radio-aktif:hover + .radio-button__label .radio-button__custom,
+.radio-button__input#radio-aktif:not(:checked):hover + .radio-button__label .radio-button__custom {
+  border-color: #28a745; /* Hijau */
+  box-shadow: 0 0 10px #28a74580; /* Hijau dengan transparansi */
+}
+
+/* Hover warna merah jika Belum Lunas */
+#radio-tidak-aktif:hover + .radio-button__label .radio-button__custom,
+.radio-button__input#radio-tidak-aktif:not(:checked):hover + .radio-button__label .radio-button__custom {
+  border-color: #dc3545; /* Merah */
+  box-shadow: 0 0 10px #dc354580; /* Merah dengan transparansi */
+}
+
+
+
+.image-ktp {
+  width: 100%; /* Atur ukuran kontainer sesuai kebutuhan */
+  height: 300px;
+  overflow: hidden; /* Sembunyikan bagian gambar yang melampaui ukuran kontainer */
+  border: 1px solid #ccc; /* Opsional: Tambahkan border untuk estetika */
+  border-radius: 8px; /* Opsional: Tambahkan border radius untuk sudut melengkung */
+}
+
+.image-ktp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pastikan gambar memenuhi kontainer tanpa distorsi */
+  display: block; /* Menghilangkan spasi default pada gambar */
+}
+
+
+@media screen and (max-width: 576px) {
+  .image-ktp {
+  height: 190px;
+  }
+
+}
+
+
+
+
+.textareahome{
+  width: 100%; /* Mengatur lebar 100% dari kontainer */
+  height: 60px; /* Atur tinggi sesuai kebutuhan */
+  padding: 10px; /* Tambahkan padding untuk ruang di dalam textarea */
+  box-sizing: border-box; /* Menghitung padding dan border ke dalam ukuran elemen */
+  background-color: #3b4148;
+  color: #eee;
+}
